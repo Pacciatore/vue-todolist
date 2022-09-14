@@ -44,11 +44,14 @@ const app = new Vue(
                 this.completedTodos.push(completedItem);
             },
             addTodo: function () {
-                const todoToInsert = this.newTodo.trim();
+                const todoToInsert = {
+                    text: this.newTodo.trim(),
+                    done: false
+                };
                 if (this.isDoppione()) {
                     console.log('Questo elemento è già presente!')
                 } else {
-                    if (todoToInsert.length > 0) {
+                    if (todoToInsert.text.length > 0) {
                         this.todos.push(todoToInsert);
                         this.newTodo = '';
                     } else {
