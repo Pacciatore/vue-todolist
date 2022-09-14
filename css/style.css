@@ -31,7 +31,7 @@ body {
     background-color: bisque;
 }
 
-.todo-list-container li>span {
+.todo-list-container li>span.item-text {
     cursor: pointer;
 }
 

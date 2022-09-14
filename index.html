@@ -58,9 +58,9 @@
                     <ul>
                         <li v-for="(todo, index) in todos" class="clearfix">
                             <span class="fs-5">
-                                {{ index + 1 }}.</span>
-                            {{ todo.text }}
-                            <span @click="deleteTodo(index)" class="done-btn float-end pe-3"> X </span>
+                                {{ index + 1 }}. </span>
+                            <span @click="deleteTodo(index)" class="item-text">{{ todo.text }}</span>
+                            <span class="done-btn float-end pe-3"> X </span>
                         </li>
                     </ul>
                 </div>
