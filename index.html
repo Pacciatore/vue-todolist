@@ -56,10 +56,11 @@
                 <div class="col-5">
                     <h2 class="text-white py-3">Da Fare</h2>
                     <ul>
-                        <li v-for="(todo, index) in todos">
-                            <span @click="deleteTodo(index)" class="fs-5">
+                        <li v-for="(todo, index) in todos" class="clearfix">
+                            <span class="fs-5">
                                 {{ index + 1 }}.</span>
-                            {{ todo }}
+                            {{ todo.text }}
+                            <span @click="deleteTodo(index)" class="done-btn float-end pe-3"> X </span>
                         </li>
                     </ul>
                 </div>
@@ -69,7 +70,8 @@
                     <h2 class="text-white py-3">Fatti</h2>
                     <ul>
                         <li v-for="(todo, index) in completedTodos">
-                            <span class="fs-5">{{ index + 1 }}.</span>{{ todo }}
+                            <span class="fs-5">{{ index + 1 }}.</span>{{ todo.text }}
+                            <span v-if="todo.done" class="done-btn float-end pe-3"> V </span>
                         </li>
                     </ul>
                 </div>

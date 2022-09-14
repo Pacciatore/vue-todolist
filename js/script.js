@@ -25,6 +25,7 @@ const app = new Vue(
             deleteTodo: function (todoPosition) {
 
                 const completedItem = this.todos[todoPosition];
+                this.todos[todoPosition].done = true;
 
                 // implementazione lunga
                 // const array = [];
