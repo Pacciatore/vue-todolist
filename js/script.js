@@ -6,9 +6,18 @@ const app = new Vue(
         data: {
             newTodo: '',
             todos: [
-                'Fare i compiti',
-                'Fare la spesa',
-                'Fare il bucato'
+                {
+                    text: 'Fare i compiti',
+                    done: false
+                },
+                {
+                    text: 'Fare la spesa',
+                    done: false
+                },
+                {
+                    text: 'Fare il bucato',
+                    done: false
+                }
             ],
             completedTodos: []
         },
