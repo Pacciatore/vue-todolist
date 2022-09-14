@@ -50,7 +50,7 @@
             </div>
 
             <!-- Elenco task, da compiere e completate -->
-            <div class="todo-list-container d-flex gap-5">
+            <div class="todo-list-container d-flex justify-content-center gap-5">
 
                 <!-- Task da compiere -->
                 <div class="col-5">
@@ -59,19 +59,11 @@
                         <li v-for="(todo, index) in todos" class="clearfix">
                             <span class="fs-5">
                                 {{ index + 1 }}. </span>
-                            <span @click="deleteTodo(index)" class="item-text">{{ todo.text }}</span>
-                            <span class="done-btn float-end pe-3"> X </span>
-                        </li>
-                    </ul>
-                </div>
+                            <span @click="todoCheck(index)" class="item-text" :class="{ done: todo.done }">{{ todo.text
+                                }}</span>
 
-                <!-- Task completate -->
-                <div class="col-5">
-                    <h2 class="text-white py-3">Fatti</h2>
-                    <ul>
-                        <li v-for="(todo, index) in completedTodos">
-                            <span class="fs-5">{{ index + 1 }}.</span>{{ todo.text }}
                             <span v-if="todo.done" class="done-btn float-end pe-3"> V </span>
+                            <span v-else @click="todoCheck(index)" class="undone-btn float-end pe-3"> X </span>
                         </li>
                     </ul>
                 </div>

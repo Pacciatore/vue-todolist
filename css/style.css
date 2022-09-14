@@ -31,8 +31,13 @@ body {
     background-color: bisque;
 }
 
-.todo-list-container li>span.item-text {
+.todo-list-container li>span.item-text,
+.todo-list-container li>span.undone-btn {
     cursor: pointer;
+}
+
+.todo-list-container li>span.item-text.done {
+    text-decoration: line-through;
 }
 
 /*#endregion Todo list  */

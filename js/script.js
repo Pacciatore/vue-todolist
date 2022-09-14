@@ -22,26 +22,9 @@ const app = new Vue(
             completedTodos: []
         },
         methods: {
-            deleteTodo: function (todoPosition) {
-
-                const completedItem = this.todos[todoPosition];
-                this.todos[todoPosition].done = true;
-
-                // implementazione lunga
-                // const array = [];
-                // for (let i = 0; i < this.todos.length; i++) {
-                //     if (i !== todoPosition) {
-                //         array.push(this.todos[i])
-                //     }
-                // }
-                // this.todos = array;
-
-                // implementazione corta
-                const arrayStart = this.todos.slice(0, todoPosition);
-                const arrayEnd = this.todos.slice(todoPosition + 1);
-
-                this.todos = [...arrayStart, ...arrayEnd];
-                this.completedTodos.push(completedItem);
+            todoCheck: function (todoPosition) {
+                this.todos[todoPosition].done = !this.todos[todoPosition].done;
+                console.log(this.todos[todoPosition].done)
             },
             addTodo: function () {
                 const todoToInsert = {
