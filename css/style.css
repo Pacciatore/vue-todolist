@@ -1,0 +1,38 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient(blue, green, yellow);
+    background-attachment: fixed;
+}
+
+#app {
+    height: 100%;
+}
+
+/*#region Todo list  */
+.add-todo-container input.doppione {
+    outline: red auto 1px;
+    outline-offset: 0px;
+}
+
+.add-todo-container input:focus-visible.doppione {
+    outline-color: red;
+}
+
+.todo-list-container ul {
+    list-style-type: none;
+    cursor: default;
+}
+
+.todo-list-container ul>li:nth-child(odd) {
+    background-color: aquamarine;
+}
+
+.todo-list-container ul>li:nth-child(even) {
+    background-color: bisque;
+}
+
+.todo-list-container li>span {
+    cursor: pointer;
+}
+
+/*#endregion Todo list  */
