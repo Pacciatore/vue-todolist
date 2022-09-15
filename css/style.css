@@ -32,7 +32,7 @@ body {
 }
 
 .todo-list-container li>span.item-text,
-.todo-list-container li>span.undone-btn {
+.todo-list-container li>i {
     cursor: pointer;
 }
 

@@ -62,8 +62,8 @@
                             <span @click="todoCheck(index)" class="item-text" :class="{ done: todo.done }">{{ todo.text
                                 }}</span>
 
-                            <span v-if="todo.done" class="done-btn float-end pe-3"> V </span>
-                            <span v-else @click="todoCheck(index)" class="undone-btn float-end pe-3"> X </span>
+                            <i @click="todoCheck(index)" class="done-btn float-end pt-1 pe-3"
+                                :class="['fa-solid', todo.done ? 'fa-check' : 'fa-xmark']"></i>
                         </li>
                     </ul>
                 </div>
