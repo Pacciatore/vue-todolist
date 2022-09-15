@@ -44,8 +44,12 @@ const app = new Vue(
             },
             isDoppione: function () {
                 const text = this.newTodo.trim();
-
-                return this.todos.includes(text);
+                // return this.todos.includes(text);
+                for (let i = 0; i < this.todos.length; i++) {
+                    if (this.todos[i].text === text) {
+                        return true;
+                    }
+                }
             }
         }
     }
